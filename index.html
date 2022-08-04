@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Assigment</title>
+</head>
+
+<body class="main">
+
+    <div class="header">
+        <nav id="myLinks">
+            <a href="#section_assigment">Uzduotis</a>
+            <a href="#section_div">Div</a>
+            <a href="#section_colors">Color boxe's</a>
+            <a href="#section_form">Form</a>
+        </nav>
+        <a href="javascript:void(0);" class="icon" onclick="burger()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
+
+    <h1>Front End Baigiamasis Darbas</h1>
+
+    <div id="section_assigment">
+        <h2>UŽDUOTYS</h2>
+        <ol>
+            <li>Paspaudus ant mygtuko, puslapyje esantis div atsiranda/ pranyksta.</li>
+            <li>Turit viena div, su auksčiu, pločiu ir spalva bei 4 mygtukus, su kuriais galima valdyti sukurto div
+                savybes: plotis, aukštis, centravimas, pozicija.</li>
+            <li>Burgeris ir šoninis Meniu: paspaudus ant burgerio, gražiai išvažiuoja šoninis meniu.</li>
+            <li>Bent 4 div elementai, pradžioje visi juodos spalvos, paspaudus bent ant vieno iš jų, pasikeičia visų
+                spalvos. Spalvos generuojamos random.</li>
+            <li>Formoje pildoma "Vardas", "Pavardė" ir "Gimimo data". Duomenys kaupiami lentelėje. Stulpeliai: Eil.Nr.,
+                Vardas, Pavardė, Amžius.</li>
+
+            <p>Visos užduotys turi būti stilizuotos, kad nebūtų sumaišytos. Kiekviena turi turėti savo section,
+                headingus ir pan.</p>
+        </ol>
+    </div>
+    <div id="section_div">
+        <div class="buttons">
+            <button type="button" onclick="onOff()" id="on/off">On / Off</button>
+            <button type="button" onclick="changeWidth()" id="width">Width</button>
+            <button type="button" onclick="changeHeight()" id="height">Height</button>
+            <button type="button" onclick="goToCenter()" id="center">Move to center</button>
+            <button type="button" onclick="changePossition()" id="position">Change position</button>
+        </div>
+
+        <div id="box"></div>
+
+
+    </div>
+
+    <div id="section_colors">
+        <div class="color" onclick="recolor(event)"></div>
+        <div class="color" onclick="recolor(event)"></div>
+        <div class="color" onclick="recolor(event)"></div>
+        <div class="color" onclick="recolor(event)"></div>
+        <div class="color" onclick="recolor(event)"></div>
+        <div class="color" onclick="recolor(event)"></div>
+
+    </div>
+
+
+    <div id="section_form">
+        <h3>Forma</h3>
+        <label for="vardas">Vardas</label>
+        <input type="vardas" id="vardas"> <br>
+
+        <label for="pavarde">Pavardė</label>
+        <input type="pavarde" id="pavarde"> <br>
+
+        <label for="data">Gimimo metai</label>
+        <input type="data" id="data"> <br>
+
+        <input id="submit" type="button" value="Pateikti">
+
+        <input id="submit" type="button" value="Išvalyti" onclick="removeTable()">
+
+    </div>
+
+    <p id="number">1</p>
+
+    <div>
+        <table id="table">
+            <tr>
+                <th>Eil. Nr.</th>
+                <th>Vardas</th>
+                <th>Pavardė</th>
+                <th>Amžius</th>
+            </tr>
+
+        </table>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
