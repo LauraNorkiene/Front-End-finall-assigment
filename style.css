@@ -167,13 +167,15 @@ label {
   margin-top: 5px;
 }
 
-#submit {
+#submit,
+#clear {
   margin: 20px;
   padding: 10px;
   font-size: 15px;
   border-radius: 85px;
   width: 15%;
   background-color: #f5e0f5;
+  box-shadow: -4px 5px 5px 0px rgba(0, 0, 0, 0.35);
 }
 
 table,
