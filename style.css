@@ -1,7 +1,7 @@
 .main {
   background-color: #f5e0f5;
   color: black;
-
+  line-height: 25px;
 }
 
 #section_assigment,
@@ -12,16 +12,18 @@
   width: 1200px;
   height: auto;
   background-color: rgb(199, 170, 199);
-  padding: 10px;
+  padding: 20px;
   margin: 0 auto;
   margin-bottom: 30px;
   box-shadow: -4px 8px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 h1 {
+  margin-top: 200px;
+  margin-bottom: 70px;
   text-align: center;
   font-weight: bolder;
-  font-size: 40px
+  font-size: 60px
 }
 
 h2 {
@@ -51,7 +53,6 @@ button {
   background-color: plum;
   border: 2px solid;
   border-radius: 10px;
-
 }
 
 .boxWidth {
@@ -78,28 +79,28 @@ button {
 
 #section_div {
   display: flex;
-
 }
 
 .header #myLinks {
-
   display: none;
 }
 
 .header a {
-
+  background-color: rgb(199, 170, 199);
   border-radius: 35px;
   margin-left: 50px;
   float: right;
   color: black;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 30px;
+
 }
 
 .header a.icon {
-
+  font-size: 40px;
   float: left;
+
 }
 
 .header a:hover {
@@ -109,11 +110,13 @@ button {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  z-index: 99;
   margin: 0 auto;
   background-color: rgb(199, 170, 199);
-  width: 1200px;
-  height: 50px;
-  border-radius: 35px;
+  width: 100%;
+  height: 70px;
   box-shadow: -4px 5px 5px 0px rgba(0, 0, 0, 0.55);
 }
 
@@ -126,8 +129,11 @@ button {
   border-radius: 100%;
   margin: 30px;
   width: 150px;
-  height: 140px;
+  height: 90px;
   background-color: black;
+  text-align: center;
+  padding-top: 70px;
+  color: white;
 }
 
 #section_form {
@@ -143,11 +149,11 @@ h3 {
   text-align: center;
 }
 
-#pavarde {
+#surname {
   margin-right: 10px;
 }
 
-#data {
+#birthOfYear {
   margin-right: 61px;
 }
 
@@ -181,13 +187,14 @@ td {
 }
 
 #table {
-  padding: 20px;
+  padding: 100px;
   display: none;
-  padding-top: 25px;
+  padding-top: 50px;
   margin: 0 auto;
   background-color: rgb(199, 170, 199);
-  width: 1200px;
-  height: 150px;
+  width: 1250px;
+  min-height: 150px;
+  height: auto;
   border-radius: 35px;
   box-shadow: -4px 5px 5px 0px rgba(0, 0, 0, 0.55);
 }

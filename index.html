@@ -14,7 +14,7 @@
 
     <div class="header">
         <nav id="myLinks">
-            <a href="#section_assigment">Uzduotis</a>
+            <a href="#section_assigment">Užduotys</a>
             <a href="#section_div">Div</a>
             <a href="#section_colors">Color boxe's</a>
             <a href="#section_form">Form</a>
@@ -69,25 +69,29 @@
 
 
     <div id="section_form">
-        <h3>Forma</h3>
-        <label for="vardas">Vardas</label>
-        <input type="vardas" id="vardas"> <br>
 
-        <label for="pavarde">Pavardė</label>
-        <input type="pavarde" id="pavarde"> <br>
+        <form id="newUser" action="" method="">
+            <h3>Forma</h3>
+            <label for="name">Vardas</label>
+            <input type="name" id="name"> <br>
 
-        <label for="data">Gimimo metai</label>
-        <input type="data" id="data"> <br>
+            <label for="surname">Pavardė</label>
+            <input type="surname" id="surname"> <br>
 
-        <input id="submit" type="button" value="Pateikti">
+            <label for="birthOfYear">Gimimo metai</label>
+            <input type="birthOfYear" id="birthOfYear"> <br>
 
-        <input id="submit" type="button" value="Išvalyti" onclick="removeTable()">
 
+            <input id="submit" type="submit" value="Pateikti">
+
+            <button id="clear">Išvalyti</button>
+        </form>
     </div>
 
-    <p id="number">1</p>
 
-    <div>
+
+
+    <div id="panaikinti">
         <table id="table">
             <tr>
                 <th>Eil. Nr.</th>
@@ -100,7 +104,7 @@
     </div>
 
 
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
 </body>
 

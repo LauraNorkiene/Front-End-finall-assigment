@@ -1,3 +1,5 @@
+//Burgerio kodas---------------------------------------------------------
+
 function burger() {
   let x = document.getElementById("myLinks");
   if (x.style.display === "block") {
@@ -7,45 +9,26 @@ function burger() {
   }
 }
 
-let colors = [
-  "red",
-  "blue",
-  "green",
-  "teal",
-  "rosybrown",
-  "tan",
-  "plum",
-  "saddlebrown",
-  "aqua",
-  "aquamarine",
-  "lawngreen",
-  "yellow",
-  "violet",
-  "crimson",
-  "pink",
-  "black",
-  "white",
-];
-let boxes = document.querySelectorAll(".color");
+//Spalvu kodas------------------------------------------------------------
 
-function recolor() {
-  for (i = 0; i < boxes.length; i++) {
-    boxes[i].style.backgroundColor =
-      colors[Math.floor(Math.random() * colors.length)];
-  }
-}
-
-/*function recolor(event) {
-  event.target.style.backgroundColor = randomColor();
+function rand() {
+  return Math.floor(Math.random() * 256);
 }
 
 function randomColor() {
   return "rgb(" + rand() + "," + rand() + "," + rand() + ")";
 }
 
-function rand() {
-  return Math.floor(Math.random() * 256);
-}*/
+let boxes = document.querySelectorAll(".color");
+
+function recolor() {
+  for (i = 0; i < boxes.length; i++) {
+    boxes[i].style.backgroundColor = randomColor();
+    boxes[i].textContent = randomColor();
+  }
+}
+
+// Divo kodai---------------------------------------------------------
 
 function onOff() {
   let element = document.getElementById("box");
@@ -72,24 +55,44 @@ function changePossition() {
   element.classList.toggle("boxPossition");
 }
 
-document.getElementById("submit").onclick = function () {
-  document.getElementById("table").style.display = "block";
+//Forma-----------------------------------------------------------
 
-  let table = document.getElementById("table");
-  let row = table.insertRow(-1);
-  let number = row.insertCell(0);
-  let vardas = row.insertCell(1);
-  let pavarde = row.insertCell(2);
-  let data = row.insertCell(3);
-  number.innerHTML = document.getElementById("number").value;
-  vardas.innerHTML = document.getElementById("vardas").value;
-  pavarde.innerHTML = document.getElementById("pavarde").value;
-  data.innerHTML = document.getElementById("data").value;
+let userForm = document.getElementById("newUser");
+let userTable = document.getElementById("table");
 
-  return false;
-};
+let nameInput = document.getElementById("name");
+let surnameInout = document.getElementById("surname");
+let birthInput = document.getElementById("birthOfYear");
 
-function removeTable() {
-  const element = document.getElementById("table");
-  element.remove();
-}
+let userCounter = 1;
+
+userForm.addEventListener("submit", function (e) {
+  userTable.style.display = "block";
+  e.preventDefault();
+
+  let name = nameInput.value;
+  let surname = surnameInout.value;
+  let birthOfYear = birthInput.value;
+
+  let row = table.insertRow();
+
+  let couterCell = row.insertCell();
+  couterCell.textContent = userCounter;
+
+  let nameCell = row.insertCell();
+  nameCell.textContent = name;
+
+  let surnameCell = row.insertCell();
+  surnameCell.textContent = surname;
+
+  let ageCell = row.insertCell();
+  ageCell.textContent = new Date().getFullYear() - parseInt(birthOfYear);
+
+  userCounter++;
+});
+
+//Isvalymo mygtukas-------------------------------------------------
+
+$("#clear").click(function () {
+  $("#panaikinti").empty();
+});
