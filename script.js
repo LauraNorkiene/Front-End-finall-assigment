@@ -96,3 +96,9 @@ userForm.addEventListener("submit", function (e) {
 $("#clear").click(function () {
   $("#panaikinti").empty();
 });
+
+$("#clear").click(function () {
+  $("#name").val("");
+  $("#surname").val("");
+  $("#birthOfYear").val("");
+});
